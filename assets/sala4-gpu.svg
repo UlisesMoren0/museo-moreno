@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="t">
+<title id="t">Esquema: la CPU envía la escena a la GPU, que hace los cálculos gráficos y produce cuadros donde una pelota cambia de posición</title>
+<rect width="640" height="400" fill="#f4f6f8"/>
+<defs><marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1b2430"/></marker></defs>
+<rect x="69.0" y="98" width="6" height="12" fill="#9aa5b1"/><rect x="69.0" y="250" width="6" height="12" fill="#9aa5b1"/>
+<rect x="44" y="123.0" width="12" height="6" fill="#9aa5b1"/><rect x="196" y="123.0" width="12" height="6" fill="#9aa5b1"/>
+<rect x="90.6" y="98" width="6" height="12" fill="#9aa5b1"/><rect x="90.6" y="250" width="6" height="12" fill="#9aa5b1"/>
+<rect x="44" y="144.6" width="12" height="6" fill="#9aa5b1"/><rect x="196" y="144.6" width="12" height="6" fill="#9aa5b1"/>
+<rect x="112.2" y="98" width="6" height="12" fill="#9aa5b1"/><rect x="112.2" y="250" width="6" height="12" fill="#9aa5b1"/>
+<rect x="44" y="166.2" width="12" height="6" fill="#9aa5b1"/><rect x="196" y="166.2" width="12" height="6" fill="#9aa5b1"/>
+<rect x="133.8" y="98" width="6" height="12" fill="#9aa5b1"/><rect x="133.8" y="250" width="6" height="12" fill="#9aa5b1"/>
+<rect x="44" y="187.8" width="12" height="6" fill="#9aa5b1"/><rect x="196" y="187.8" width="12" height="6" fill="#9aa5b1"/>
+<rect x="155.4" y="98" width="6" height="12" fill="#9aa5b1"/><rect x="155.4" y="250" width="6" height="12" fill="#9aa5b1"/>
+<rect x="44" y="209.4" width="12" height="6" fill="#9aa5b1"/><rect x="196" y="209.4" width="12" height="6" fill="#9aa5b1"/>
+<rect x="177.0" y="98" width="6" height="12" fill="#9aa5b1"/><rect x="177.0" y="250" width="6" height="12" fill="#9aa5b1"/>
+<rect x="44" y="231.0" width="12" height="6" fill="#9aa5b1"/><rect x="196" y="231.0" width="12" height="6" fill="#9aa5b1"/>
+<rect x="56" y="110" width="140" height="140" rx="10" fill="#2b3542"/>
+<text x="126.0" y="190.0" text-anchor="middle" font-size="30" font-weight="700" fill="#fff" font-family="Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif">CPU</text>
+<rect x="303.0" y="98" width="6" height="12" fill="#9aa5b1"/><rect x="303.0" y="250" width="6" height="12" fill="#9aa5b1"/>
+<rect x="278" y="123.0" width="12" height="6" fill="#9aa5b1"/><rect x="430" y="123.0" width="12" height="6" fill="#9aa5b1"/>
+<rect x="324.6" y="98" width="6" height="12" fill="#9aa5b1"/><rect x="324.6" y="250" width="6" height="12" fill="#9aa5b1"/>
+<rect x="278" y="144.6" width="12" height="6" fill="#9aa5b1"/><rect x="430" y="144.6" width="12" height="6" fill="#9aa5b1"/>
+<rect x="346.2" y="98" width="6" height="12" fill="#9aa5b1"/><rect x="346.2" y="250" width="6" height="12" fill="#9aa5b1"/>
+<rect x="278" y="166.2" width="12" height="6" fill="#9aa5b1"/><rect x="430" y="166.2" width="12" height="6" fill="#9aa5b1"/>
+<rect x="367.8" y="98" width="6" height="12" fill="#9aa5b1"/><rect x="367.8" y="250" width="6" height="12" fill="#9aa5b1"/>
+<rect x="278" y="187.8" width="12" height="6" fill="#9aa5b1"/><rect x="430" y="187.8" width="12" height="6" fill="#9aa5b1"/>
+<rect x="389.4" y="98" width="6" height="12" fill="#9aa5b1"/><rect x="389.4" y="250" width="6" height="12" fill="#9aa5b1"/>
+<rect x="278" y="209.4" width="12" height="6" fill="#9aa5b1"/><rect x="430" y="209.4" width="12" height="6" fill="#9aa5b1"/>
+<rect x="411.0" y="98" width="6" height="12" fill="#9aa5b1"/><rect x="411.0" y="250" width="6" height="12" fill="#9aa5b1"/>
+<rect x="278" y="231.0" width="12" height="6" fill="#9aa5b1"/><rect x="430" y="231.0" width="12" height="6" fill="#9aa5b1"/>
+<rect x="290" y="110" width="140" height="140" rx="10" fill="#2a5580"/>
+<text x="360.0" y="190.0" text-anchor="middle" font-size="30" font-weight="700" fill="#fff" font-family="Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif">GPU</text>
+<line x1="212" y1="180" x2="272" y2="180" stroke="#1b2430" stroke-width="3" marker-end="url(#flecha)"/>
+<line x1="446" y1="180" x2="488" y2="180" stroke="#1b2430" stroke-width="3" marker-end="url(#flecha)"/>
+<rect x="498" y="74" width="106" height="64" fill="#fff" stroke="#9aa5b1" stroke-width="2"/>
+<line x1="502" y1="130" x2="600" y2="130" stroke="#c6ced6" stroke-width="2"/>
+<circle cx="516" cy="116" r="9" fill="#4080c0"/>
+<rect x="498" y="150" width="106" height="64" fill="#fff" stroke="#9aa5b1" stroke-width="2"/>
+<line x1="502" y1="206" x2="600" y2="206" stroke="#c6ced6" stroke-width="2"/>
+<circle cx="548" cy="186" r="9" fill="#4080c0"/>
+<rect x="498" y="226" width="106" height="64" fill="#fff" stroke="#9aa5b1" stroke-width="2"/>
+<line x1="502" y1="282" x2="600" y2="282" stroke="#c6ced6" stroke-width="2"/>
+<circle cx="580" cy="256" r="9" fill="#4080c0"/>
+<text x="126" y="300" text-anchor="middle" font-size="15" fill="#1b2430" font-family="Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif">Lógica del programa</text>
+<text x="360" y="300" text-anchor="middle" font-size="15" fill="#1b2430" font-family="Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif">Cálculos gráficos</text>
+<text x="551" y="320" text-anchor="middle" font-size="15" fill="#1b2430" font-family="Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif">Cuadros</text>
+<text x="320" y="368" text-anchor="middle" font-size="16" fill="#1b2430" font-family="Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif">La GPU le quita a la CPU el trabajo gráfico</text>
+</svg>

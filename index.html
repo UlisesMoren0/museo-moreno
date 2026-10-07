@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Museo web sobre cómo evolucionó la graficación por computadora y cómo se convierte un color de RGB a HSV: cinco momentos históricos, una aplicación real, experimentos de color y un algoritmo probado." />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Museo de la Evolución Gráfica, por Ulises Moreno</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="cabecera">
+      <div class="contenedor cabecera-fila">
+        <a class="marca" href="#inicio"><span class="marca-pixel" aria-hidden="true"></span>Museo de la Evolución Gráfica</a>
+        <nav aria-label="Navegación principal">
+          <ul>
+            <li><a href="#evolucion">Evolución</a></li>
+            <li><a href="#aplicacion">Aplicación</a></li>
+            <li><a href="#laboratorio">Color</a></li>
+            <li><a href="#algoritmo">Algoritmo</a></li>
+            <li><a href="#glosario">Glosario</a></li>
+            <li><a href="#conclusion">Conclusión</a></li>
+            <li><a href="#fuentes">Fuentes</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <!-- 1. Portada -->
+      <section class="hero" id="inicio" aria-labelledby="titulo">
+        <div class="contenedor hero-rejilla">
+          <div>
+            <h1 id="titulo">Museo de la Evolución Gráfica</h1>
+            <p class="subtitulo">Del primer punto de luz en una pantalla al color que se calcula dentro del navegador.</p>
+            <p class="definicion"><strong>Qué es la graficación por computadora:</strong> es convertir datos en imágenes que una persona puede ver, explorar y usar para decidir. No es decoración: cada momento de este museo resolvió algo que antes solo se podía leer como una lista de números.</p>
+            <p class="autor">Autor: Ulises Moreno</p>
+          </div>
+
+          <figure class="pieza" aria-labelledby="pieza-pie">
+            <div class="muestra" role="img" aria-label="Muestra del color RGB 64, 128, 192, un azul medio"><span>RGB(64, 128, 192)</span></div>
+            <ul class="canales" aria-label="Canales del píxel normalizados entre 0 y 1">
+              <li class="canal canal-r"><span class="canal-letra">R</span><span class="canal-barra" aria-hidden="true"><span style="--nivel: 0.251"></span></span><span class="canal-valor">64 / 255 = 0.251</span></li>
+              <li class="canal canal-g"><span class="canal-letra">G</span><span class="canal-barra" aria-hidden="true"><span style="--nivel: 0.502"></span></span><span class="canal-valor">128 / 255 = 0.502</span></li>
+              <li class="canal canal-b"><span class="canal-letra">B</span><span class="canal-barra" aria-hidden="true"><span style="--nivel: 0.753"></span></span><span class="canal-valor">192 / 255 = 0.753</span></li>
+            </ul>
+            <dl class="lecturas">
+              <div><dt>HSV</dt><dd>210°, 66.7%, 75.3%</dd></div>
+              <div><dt>HSL</dt><dd>210°, 50.4%, 50.2%</dd></div>
+            </dl>
+            <figcaption id="pieza-pie">Pieza central: un mismo píxel escrito de tres maneras. V toma el canal mayor (192, es decir 75.3%) y L promedia el mayor y el menor (192 y 64, es decir 50.2%). Convertir no pierde información: solo cambia las coordenadas con las que se describe el color.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 2. Cinco momentos -->
+      <section id="evolucion" aria-labelledby="evolucion-titulo">
+        <div class="contenedor">
+          <header class="seccion-cabeza">
+            <h2 id="evolucion-titulo">Cinco momentos de la evolución</h2>
+            <p>Cada sala responde las mismas preguntas: qué no se podía hacer, qué tecnología apareció, qué permitió hacer y dónde se usa hoy esa posibilidad.</p>
+          </header>
+
+          <ol class="linea-tiempo">
+            <li>
+              <article class="sala" aria-labelledby="sala1-titulo">
+                <p class="sala-fecha"><time datetime="1951">1951</time></p>
+                <div class="sala-placa">
+                  <h3 id="sala1-titulo">La imagen como salida: la pantalla CRT de Whirlwind</h3>
+                  <figure>
+                    <img src="./assets/sala1-whirlwind.svg" width="640" height="400" loading="lazy" alt="Esquema: a la izquierda, un listado impreso con filas de números; a la derecha, una consola con pantalla circular que muestra una trayectoria de puntos y un lápiz óptico tocando uno de ellos." />
+                    <figcaption>Esquema hecho para este museo (elaborado con apoyo de IA). La fotografía histórica se describe y enlaza en “Imagen de referencia”.</figcaption>
+                  </figure>
+                  <dl class="ficha">
+                    <div><dt>Limitación anterior</dt><dd>Los resultados salían en tarjetas perforadas o en listados llenos de números y texto. Para reconocer una forma o una trayectoria había que leer columnas de cifras e imaginar el dibujo, y con tarjetas o cinta de papel la respuesta podía tardar de minutos a días.</dd></div>
+                    <div><dt>Cambio técnico</dt><dd>Investigué la pantalla CRT. Las pantallas de video para computadoras digitales se desarrollaron a inicios de los años 50 para la computadora Whirlwind del MIT, que funcionaba desde 1951 y pudo ser la primera en mostrar texto y gráficos en una terminal de video. Hacia 1952 se agregó el lápiz óptico para señalar puntos en esa pantalla.</dd></div>
+                    <div><dt>Impacto</dt><dd>Las posiciones, trayectorias y formas se podían reconocer de un vistazo, y la persona veía y actuaba sobre la información en cuanto la computadora la generaba. La misma idea llegó al sistema de defensa aérea SAGE, donde los operadores trabajaban con datos de radar usando un lápiz óptico.</dd></div>
+                    <div><dt>Ejemplo actual</dt><dd>Un tablero como Grafana o Google Analytics, que muestra tráfico, ventas o uso de un servidor como gráficas en tiempo real en lugar de tablas de números.</dd></div>
+                    <div><dt>Imagen de referencia</dt><dd>“Circular monitor display for Whirlwind”: la pantalla circular de la consola de Whirlwind. Representa este momento porque es uno de los primeros registros de una computadora que entrega su resultado como imagen en una pantalla y no en papel.</dd></div>
+                    <div><dt>Fuente</dt><dd><a href="https://www.computerhistory.org/revolution/input-output/14/349/1544">Computer History Museum: Circular monitor display for Whirlwind</a>, dentro de la sala <a href="https://www.computerhistory.org/revolution/input-output/14/349">Video Displays</a>. El dato del retraso de minutos a días viene de la sala <a href="https://www.computerhistory.org/revolution/input-output/14/347">Xerox Alto</a> del mismo museo.</dd></div>
+                  </dl>
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="sala" aria-labelledby="sala2-titulo">
+                <p class="sala-fecha"><time datetime="1963">1963</time></p>
+                <div class="sala-placa">
+                  <h3 id="sala2-titulo">Sketchpad: dibujos geométricos interactivos</h3>
+                  <figure>
+                    <img src="./assets/sala2-sketchpad.svg" width="640" height="400" loading="lazy" alt="Esquema de Sketchpad: una figura geométrica en una pantalla con marcas de ángulo recto y de lados iguales, un lápiz óptico sobre uno de sus vértices y, a un lado, un dibujo maestro unido a tres copias." />
+                    <figcaption>Esquema hecho para este museo (elaborado con apoyo de IA). La fotografía histórica se describe y enlaza en “Imagen de referencia”.</figcaption>
+                  </figure>
+                  <dl class="ficha">
+                    <div><dt>Limitación anterior</dt><dd>Ya existían la pantalla CRT y el lápiz óptico, pero corregir un dibujo geométrico completo seguía siendo lento: si cambiaba una parte, había que rehacer a mano las medidas y relaciones que dependían de ella, y repetir una figura significaba dibujarla otra vez.</dd></div>
+                    <div><dt>Cambio técnico</dt><dd>Sketchpad fue el programa de la tesis doctoral de Ivan Sutherland en el MIT (1963) y corría en la computadora TX-2. Reunió tres funciones: dibujar directamente sobre la pantalla con el lápiz óptico, fijar restricciones geométricas (por ejemplo, la longitud de una línea o el ángulo entre dos líneas) y crear dibujos maestros que se copian como instancias.</dd></div>
+                    <div><dt>Impacto</dt><dd>Al cambiar el dibujo maestro cambiaban todas sus copias, y mover un punto actualizaba todas las figuras que lo usaban. Corregir o reorganizar un dibujo dejó de significar empezar de nuevo; por eso se le considera el antecesor de los programas de diseño asistido por computadora (CAD).</dd></div>
+                    <div><dt>Ejemplo actual</dt><dd>Figma: muevo figuras directamente con el cursor y uso componentes, que funcionan igual que un maestro con sus copias.</dd></div>
+                    <div><dt>Imagen de referencia</dt><dd>“Ivan Sutherland demonstrating Sketchpad on the TX-2”: Sutherland usando Sketchpad en la consola de la TX-2. Representa el momento en que la persona deja de solo mirar la salida y empieza a trabajar directamente sobre el dibujo en la pantalla.</dd></div>
+                    <div><dt>Fuente</dt><dd><a href="https://www.computerhistory.org/revolution/input-output/14/349/1878">Computer History Museum: Ivan Sutherland demonstrating Sketchpad on the TX-2</a>. Las restricciones y el uso del lápiz óptico se complementan con <a href="https://en.wikipedia.org/wiki/Sketchpad">Wikipedia: Sketchpad</a>.</dd></div>
+                  </dl>
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="sala" aria-labelledby="sala3-titulo">
+                <p class="sala-fecha"><time datetime="1973">1973</time></p>
+                <div class="sala-placa">
+                  <h3 id="sala3-titulo">Imágenes rasterizadas en la computación personal</h3>
+                  <figure>
+                    <img src="./assets/sala3-raster.svg" width="640" height="400" loading="lazy" alt="Comparación: el mismo círculo guardado como figura vectorial con centro y radio, y como cuadrícula de píxeles con bordes escalonados; un píxel del borde está señalado como un color R, G, B." />
+                    <figcaption>Esquema hecho para este museo (elaborado con apoyo de IA). La fotografía histórica se describe y enlaza en “Imagen de referencia”.</figcaption>
+                  </figure>
+                  <dl class="ficha">
+                    <div><dt>Limitación anterior</dt><dd>Un sistema vectorial guarda instrucciones de líneas y figuras. En una fotografía hay sombras, texturas y degradados irregulares que no se pueden describir bien así. Además, la mayoría de las terminales de la época solo mostraban texto monocromático de un solo tamaño.</dd></div>
+                    <div><dt>Cambio técnico</dt><dd>Una imagen rasterizada guarda el color de cada píxel en una cuadrícula. El Xerox Alto, diseñado en 1973 en Xerox PARC, unió una pantalla de mapa de bits con teclado, ratón, red y ventanas, en un monitor monocromático de 600 × 800 píxeles.</dd></div>
+                    <div><dt>Impacto</dt><dd>Como cada píxel se guarda por separado, se puede retocar cualquier zona de una imagen sin redefinir figuras completas. En el Alto se pudieron combinar imágenes con distintos tipos de letra y diseños, y el editor Bravo mostraba la página igual a como saldría impresa.</dd></div>
+                    <div><dt>Ejemplo actual</dt><dd>Photoshop, donde el pincel o el sello clonador cambian los píxeles de una zona concreta de una foto.</dd></div>
+                    <div><dt>Imagen de referencia</dt><dd>“BRAVO text editor screen”: el editor Bravo en un Alto con dos documentos abiertos, mostrados en pantalla tal como se imprimirían. Como el monitor era de 600 × 800 píxeles, el texto y el diseño están formados por puntos de esa cuadrícula.</dd></div>
+                    <div><dt>Fuente</dt><dd><a href="https://www.computerhistory.org/revolution/input-output/14/347/1856">Computer History Museum: BRAVO text editor screen</a>, dentro de la sala <a href="https://www.computerhistory.org/revolution/input-output/14/347">Xerox Alto</a>. El año y la pantalla de mapa de bits vienen del <a href="https://computerhistory.org/press-releases/xerox-alto/">comunicado del museo sobre el código fuente del Alto</a>.</dd></div>
+                  </dl>
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="sala" aria-labelledby="sala4-titulo">
+                <p class="sala-fecha"><time datetime="1999">1999</time></p>
+                <div class="sala-placa">
+                  <h3 id="sala4-titulo">Hardware especializado: gráficos en tiempo real</h3>
+                  <figure>
+                    <img src="./assets/sala4-gpu.svg" width="640" height="400" loading="lazy" alt="Esquema: la CPU envía la escena a la GPU, que hace los cálculos gráficos y produce tres cuadros en los que una pelota cambia de posición." />
+                    <figcaption>Esquema hecho para este museo (elaborado con apoyo de IA). La fotografía histórica se describe y enlaza en “Imagen de referencia”.</figcaption>
+                  </figure>
+                  <dl class="ficha">
+                    <div><dt>Limitación anterior</dt><dd>Si la imagen tarda en responder, los reflejos de la persona dejan de coincidir con lo que ve: en un videojuego o un simulador el movimiento se siente entrecortado y se pierde el control. La CPU tenía que hacer la lógica del programa y, además, los cálculos gráficos.</dd></div>
+                    <div><dt>Cambio técnico</dt><dd>En 1999 Nvidia lanzó la GeForce 256, un procesador diseñado para manipular gráficos que se dio a conocer como “Graphics Processing Unit” o GPU. Se encargaba de los cálculos gráficos para quitarle esa carga a la CPU, que seguía con las tareas no gráficas.</dd></div>
+                    <div><dt>Impacto</dt><dd>Con un procesador dedicado a los gráficos, la imagen se actualiza más rápido: mover, girar la cámara o disparar se refleja en pantalla casi al instante y el movimiento se ve continuo.</dd></div>
+                    <div><dt>Ejemplo actual</dt><dd>Un simulador de vuelo, donde cada movimiento del control tiene que verse de inmediato en la pantalla.</dd></div>
+                    <div><dt>Imagen de referencia</dt><dd>“nVIDIA GeForce 256 closeup”: acercamiento a la tarjeta GeForce 256, a la que con frecuencia se considera la primera GPU de consumo.</dd></div>
+                    <div><dt>Fuente</dt><dd><a href="https://www.computerhistory.org/timeline/1999/">Computer History Museum: Timeline of Computer History, 1999</a>.</dd></div>
+                  </dl>
+                </div>
+              </article>
+            </li>
+
+            <li>
+              <article class="sala" aria-labelledby="sala5-titulo">
+                <p class="sala-fecha"><time datetime="2004">2004</time><span class="y">y</span><time datetime="2011">2011</time></p>
+                <div class="sala-placa">
+                  <h3 id="sala5-titulo">Gráficos en el navegador: Canvas y WebGL</h3>
+                  <figure>
+                    <img src="./assets/sala5-navegador.svg" width="640" height="400" loading="lazy" alt="Ventana de navegador con un área canvas que muestra un cubo de líneas en 3D y una flecha curva que indica que se puede girar con el puntero." />
+                    <figcaption>Esquema hecho para este museo (elaborado con apoyo de IA). La imagen interactiva de referencia se describe y enlaza abajo.</figcaption>
+                  </figure>
+                  <dl class="ficha">
+                    <div><dt>Limitación anterior</dt><dd>Antes de Canvas, los gráficos interactivos en una página dependían de complementos como los applets de Java (1995) o Adobe Flash (1996). Había que instalarlos aparte en cada equipo, mantenerlos actualizados y lidiar con sus problemas de seguridad.</dd></div>
+                    <div><dt>Cambio técnico</dt><dd>Canvas es un elemento de HTML para dibujar gráficos 2D con JavaScript; Apple lo agregó a WebKit en 2004. WebGL usa ese mismo elemento para gráficos 3D acelerados por la GPU: el Khronos Group publicó su especificación 1.0 el 3 de marzo de 2011 para lograrlo sin complementos.</dd></div>
+                    <div><dt>Impacto</dt><dd>Con solo abrir la página, un sitio puede mostrar animaciones, juegos o modelos 3D interactivos en cualquier navegador compatible, sin pedir que se instale nada.</dd></div>
+                    <div><dt>Ejemplo actual</dt><dd>Sketchfab, un sitio donde se exploran modelos 3D girándolos con el mouse; su visor funciona con WebGL.</dd></div>
+                    <div><dt>Imagen de referencia</dt><dd>Un fractal 3D llamado “Mandelbulb” que el artículo dibuja en tiempo real con la GPU y que se puede arrastrar para girarlo, sin instalar nada.</dd></div>
+                    <div><dt>Fuente</dt><dd><a href="https://dev.to/usapopopooon/why-can-you-right-click-save-a-webgl-canvas-a-20-year-history-of-browser-graphics-4kb3">DEV Community: A 20-Year History of Browser Graphics</a>, <a href="https://www.khronos.org/news/press/khronos-releases-final-webgl-1.0-specification">Khronos Group: WebGL 1.0</a> y <a href="https://help.sketchfab.com/en/articles/16152700-browser-and-os-compatibility">Ayuda de Sketchfab</a>.</dd></div>
+                  </dl>
+                </div>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 3. Aplicación real -->
+      <section id="aplicacion" aria-labelledby="aplicacion-titulo">
+        <div class="contenedor">
+          <header class="seccion-cabeza">
+            <h2 id="aplicacion-titulo">Una aplicación real</h2>
+            <p>Analicé la función para planear rutas de una aplicación de mapas con una muestra de práctica: dos rutas a pie del Museo Comunitario al Parque del Lago. Los lugares, calles, tiempos y distancias de la muestra son ficticios.</p>
+          </header>
+
+          <div class="aplicacion-rejilla">
+            <figure>
+              <img src="./assets/ruta-museo-parque.svg" width="640" height="400" loading="lazy" alt="Mapa esquemático con dos rutas a pie del Museo Comunitario, marcado con O, al Parque del Lago, marcado con D. La ruta A es una línea continua y la ruta B una línea discontinua; cada una lleva su letra." />
+              <figcaption>Esquema propio basado en los datos ficticios de la muestra (elaborado con apoyo de IA). Las rutas se distinguen por letra, tipo de línea y texto, no solo por el color.</figcaption>
+            </figure>
+
+            <ol class="cadena" role="list">
+              <li><h3>Usuario</h3><p>Una persona que necesita ir a pie de un lugar a otro y quiere elegir por dónde caminar.</p></li>
+              <li><h3>Problema</h3><p>Antes de salir, necesita comparar dos trayectos para decidir cuál le conviene más.</p></li>
+              <li><h3>Datos de entrada</h3><p>El origen (Museo Comunitario), el destino (Parque del Lago) y el medio de transporte (a pie), que la persona escribe o selecciona.</p></li>
+              <li><h3>Representación visual</h3><p>Un mapa donde “O” marca el origen y “D” el destino. La ruta A es una línea continua y la ruta B una línea discontinua, cada una con su letra, y debajo hay un texto con el tiempo, la distancia y las calles de cada opción.</p></li>
+              <li><h3>Decisión</h3><p>Elegir la ruta A (12 minutos, 900 metros), que es la más corta y rápida, o la ruta B (15 minutos, 1.1 kilómetros) si ese camino le conviene más.</p></li>
+            </ol>
+          </div>
+
+          <div class="propuesta">
+            <h3>Modelo de color propuesto: HSL</h3>
+            <p>Propongo HSL porque separa el tono de la luminosidad: puedo darle un tono distinto a cada ruta y ajustar la luminosidad para que contraste con el fondo del mapa. Google Maps hace algo parecido: cuando hay varias rutas, la mejor se muestra en azul y las demás en gris. La letra y el tipo de línea siguen siendo el respaldo para quien no distingue bien los colores, y el contraste real hay que comprobarlo aparte.</p>
+            <p class="nota">Es una propuesta de diseño; la fuente no indica el modelo de color interno de la aplicación. Fuente: <a href="https://support.google.com/maps/answer/144339?hl=Es-419">Ayuda de Google Maps: cómo obtener instrucciones y mostrar rutas</a>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Laboratorio de color -->
+      <section id="laboratorio" aria-labelledby="laboratorio-titulo">
+        <div class="contenedor">
+          <header class="seccion-cabeza">
+            <h2 id="laboratorio-titulo">Laboratorio de color</h2>
+            <p>Tres experimentos con la misma regla: primero predije, después medí en el laboratorio y al final expliqué la relación entre los números. Máximo, mínimo y delta (Δ) están en la escala de 0 a 255; CMY, S, V y L en porcentaje.</p>
+          </header>
+
+          <article class="experimento" aria-labelledby="exp1-titulo">
+            <h3 id="exp1-titulo">Experimento 1: cuando desaparece el tono</h3>
+            <h4>Predicción</h4>
+            <p>Si R, G y B son iguales, el máximo y el mínimo serán el mismo número, delta será 0 y la saturación caerá a 0% en HSV y en HSL. Lo único que cambiaría entre negro, blanco y gris sería el valor o la luminosidad.</p>
+            <h4>Datos observados</h4>
+            <ul class="casos" role="list">
+              <li class="caso">
+                <div class="caso-muestra" style="background: rgb(0, 0, 0)" role="img" aria-label="Muestra negra"></div>
+                <h5>Negro</h5>
+                <dl><dt>RGB</dt><dd>0, 0, 0</dd><dt>CMY</dt><dd>100%, 100%, 100%</dd><dt>HSV</dt><dd>0°, 0%, 0%</dd><dt>HSL</dt><dd>0°, 0%, 0%</dd><dt>Máx/mín/Δ</dt><dd>0 / 0 / 0</dd></dl>
+              </li>
+              <li class="caso">
+                <div class="caso-muestra" style="background: rgb(255, 255, 255)" role="img" aria-label="Muestra blanca"></div>
+                <h5>Blanco</h5>
+                <dl><dt>RGB</dt><dd>255, 255, 255</dd><dt>CMY</dt><dd>0%, 0%, 0%</dd><dt>HSV</dt><dd>0°, 0%, 100%</dd><dt>HSL</dt><dd>0°, 0%, 100%</dd><dt>Máx/mín/Δ</dt><dd>255 / 255 / 0</dd></dl>
+              </li>
+              <li class="caso">
+                <div class="caso-muestra" style="background: rgb(128, 128, 128)" role="img" aria-label="Muestra gris media"></div>
+                <h5>Gris</h5>
+                <dl><dt>RGB</dt><dd>128, 128, 128</dd><dt>CMY</dt><dd>49.8%, 49.8%, 49.8%</dd><dt>HSV</dt><dd>0°, 0%, 50.2%</dd><dt>HSL</dt><dd>0°, 0%, 50.2%</dd><dt>Máx/mín/Δ</dt><dd>128 / 128 / 0</dd></dl>
+              </li>
+            </ul>
+            <h4>Conclusión</h4>
+            <p>Se cumplió: en los tres casos delta fue 0 y la saturación 0%. El tono aparece como 0°, pero solo por convenio, porque un gris no tiene tono. Lo único que cambió fue el brillo, que pasó de 0% a 50.2% y a 100% siguiendo el nivel de gris; aquí V y L dan lo mismo porque el máximo y el mínimo coinciden.</p>
+          </article>
+
+          <article class="experimento" aria-labelledby="exp2-titulo">
+            <h3 id="exp2-titulo">Experimento 2: mismo sector, distinta intensidad</h3>
+            <h4>Predicción</h4>
+            <p>El tono se mantendrá porque el rojo sigue siendo el canal mayor, y V tampoco cambiará porque depende solo de ese canal (128). La saturación debería bajar al subir el verde y el azul, porque el color se acerca a un gris.</p>
+            <h4>Datos observados</h4>
+            <ul class="casos" role="list">
+              <li class="caso">
+                <div class="caso-muestra" style="background: rgb(128, 0, 0)" role="img" aria-label="Muestra rojo oscuro"></div>
+                <h5>Rojo oscuro</h5>
+                <dl><dt>RGB</dt><dd>128, 0, 0</dd><dt>CMY</dt><dd>49.8%, 100%, 100%</dd><dt>HSV</dt><dd>0°, 100%, 50.2%</dd><dt>HSL</dt><dd>0°, 100%, 25.1%</dd><dt>Máx/mín/Δ</dt><dd>128 / 0 / 128</dd></dl>
+              </li>
+              <li class="caso">
+                <div class="caso-muestra" style="background: rgb(128, 64, 64)" role="img" aria-label="Muestra rojo apagado"></div>
+                <h5>Rojo apagado</h5>
+                <dl><dt>RGB</dt><dd>128, 64, 64</dd><dt>CMY</dt><dd>49.8%, 74.9%, 74.9%</dd><dt>HSV</dt><dd>0°, 50%, 50.2%</dd><dt>HSL</dt><dd>0°, 33.3%, 37.6%</dd><dt>Máx/mín/Δ</dt><dd>128 / 64 / 64</dd></dl>
+              </li>
+            </ul>
+            <h4>Conclusión</h4>
+            <p>El tono se quedó en 0° y V en 50.2% en los dos casos, porque el canal mayor siguió siendo 128. Lo que cambió fue el mínimo, de 0 a 64: delta bajó de 128 a 64, la saturación bajó de 100% a 50% en HSV (y de 100% a 33.3% en HSL) y L subió de 25.1% a 37.6%. La intensidad la marca el canal mayor; qué tan cerca están los canales entre sí la marca delta.</p>
+          </article>
+
+          <article class="experimento" aria-labelledby="exp3-titulo">
+            <h3 id="exp3-titulo">Experimento 3: un color intermedio</h3>
+            <h4>Predicción</h4>
+            <p>B será el canal mayor y R el menor. V y L saldrán distintos, porque V toma solo el canal mayor y L promedia el mayor con el menor, y aquí están muy separados (192 contra 64).</p>
+            <h4>Datos observados</h4>
+            <ul class="casos" role="list">
+              <li class="caso">
+                <div class="caso-muestra" style="background: rgb(64, 128, 192)" role="img" aria-label="Muestra azul medio"></div>
+                <h5>Azul medio</h5>
+                <dl><dt>RGB</dt><dd>64, 128, 192</dd><dt>CMY</dt><dd>74.9%, 49.8%, 24.7%</dd><dt>HSV</dt><dd>210°, 66.7%, 75.3%</dd><dt>HSL</dt><dd>210°, 50.4%, 50.2%</dd><dt>Máx/mín/Δ</dt><dd>192 / 64 / 128</dd></dl>
+              </li>
+            </ul>
+            <h4>Conclusión</h4>
+            <p>V salió 75.3% y L 50.2%: casi 25 puntos de diferencia para el mismo color. V se calcula como 192 / 255, y L como (192 + 64) / 2 / 255. Cuando delta es grande, V y L se separan; cuando delta es 0, como en el experimento 1, coinciden.</p>
+          </article>
+
+          <article class="experimento" aria-labelledby="exp4-titulo">
+            <h3 id="exp4-titulo">Práctica extra: dos regiones de una imagen costera</h3>
+            <p>En una ilustración de costa tomé un punto del cielo, en la posición (345, 103), y uno del sol, en la posición (721, 159), y los leí con el modelo HSV.</p>
+            <h4>Datos observados</h4>
+            <ul class="casos" role="list">
+              <li class="caso">
+                <div class="caso-muestra" style="background: rgb(33, 133, 231)" role="img" aria-label="Muestra del azul del cielo"></div>
+                <h5>Cielo</h5>
+                <dl><dt>RGB</dt><dd>33, 133, 231</dd><dt>CMY</dt><dd>87.1%, 47.8%, 9.4%</dd><dt>HSV</dt><dd>209.7°, 85.7%, 90.6%</dd><dt>HSL</dt><dd>209.7°, 80.5%, 51.8%</dd></dl>
+              </li>
+              <li class="caso">
+                <div class="caso-muestra" style="background: rgb(253, 197, 63)" role="img" aria-label="Muestra del amarillo del sol"></div>
+                <h5>Sol</h5>
+                <dl><dt>RGB</dt><dd>253, 197, 63</dd><dt>CMY</dt><dd>0.8%, 22.7%, 75.3%</dd><dt>HSV</dt><dd>42.3°, 75.1%, 99.2%</dd><dt>HSL</dt><dd>42.3°, 97.9%, 62%</dd></dl>
+              </li>
+            </ul>
+            <h4>Conclusión</h4>
+            <p>Esperaba que el sol tuviera el mayor valor, y así fue: V de 99.2% contra 90.6% del cielo. El tono los separa mucho más (42.3° contra 209.7°, casi lados opuestos del círculo), así que la diferencia principal entre las dos regiones es de tono y no de brillo.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 5. Algoritmo -->
+      <section id="algoritmo" aria-labelledby="algoritmo-titulo">
+        <div class="contenedor">
+          <header class="seccion-cabeza">
+            <h2 id="algoritmo-titulo">De la fórmula al algoritmo</h2>
+            <p>La conversión de RGB a HSV sigue una ruta común para todos los colores: normalizar, encontrar el máximo y el mínimo y calcular delta. Después decide según dos preguntas: ¿delta es 0? y ¿qué canal es el mayor?</p>
+          </header>
+
+          <div class="algoritmo-rejilla">
+            <div>
+              <h3>Pseudocódigo</h3>
+              <pre class="pseudo" tabindex="0" aria-label="Pseudocódigo de la conversión de RGB a HSV">Entrada: r, g, b (enteros de 0 a 255)
+Salida: [h, s, v] con h en grados (0 a 360) y s, v en porcentaje
+
+1. Normalizar: dividir r, g y b entre 255.
+2. max = el mayor de los tres; min = el menor.
+3. delta = max - min.
+4. v = max × 100.
+5. Si max es 0: s = 0. Si no: s = delta / max × 100.
+6. Si delta es 0 (gris, blanco o negro):
+     h = 0 por convenio y no se divide entre delta.
+7. Si no, según el canal mayor:
+     rojo:  h = 60 × (((g - b) / delta) mod 6)
+     verde: h = 60 × ((b - r) / delta + 2)
+     azul:  h = 60 × ((r - g) / delta + 4)
+8. Si h quedó negativo, sumarle 360.
+9. Devolver [h, s, v].</pre>
+            </div>
+            <div>
+              <h3>La función en JavaScript</h3>
+              <pre tabindex="0" aria-label="Código de la función convertRGBtoHSV"><code>function convertRGBtoHSV(r, g, b) {
+  const red = r / 255;
+  const green = g / 255;
+  const blue = b / 255;
+
+  const max = Math.max(red, green, blue);
+  const min = Math.min(red, green, blue);
+  const delta = max - min;
+
+  let h = 0;
+  if (delta !== 0) {
+    if (max === red) {
+      h = 60 * (((green - blue) / delta) % 6);
+    } else if (max === green) {
+      h = 60 * ((blue - red) / delta + 2);
+    } else {
+      h = 60 * ((red - green) / delta + 4);
+    }
+  }
+  if (h &lt; 0) h += 360;
+
+  const s = max === 0 ? 0 : (delta / max) * 100;
+  const v = max * 100;
+
+  return [h, s, v];
+}</code></pre>
+            </div>
+          </div>
+
+          <div class="lectura">
+            <h3>Por qué delta = 0 es un caso especial</h3>
+            <p>Cuando R, G y B son iguales, el máximo y el mínimo coinciden y delta vale 0. Ese color es acromático: un gris, el blanco o el negro. No tiene tono, porque ningún canal domina sobre los demás, y además las tres fórmulas de H dividen entre delta: dividir entre 0 en JavaScript daría <code>NaN</code>. Por eso la función revisa delta antes de calcular el tono y, si vale 0, deja h en 0 por convenio. La saturación también queda en 0, porque delta / max es 0; y en el negro, donde max también es 0, se devuelve 0 directamente para no dividir 0 entre 0.</p>
+            <p>El <code>% 6</code> de la rama roja y el ajuste de sumar 360 sirven para colores como RGB(255, 0, 128), donde el azul es mayor que el verde: el cálculo da −30.1° y, al sumarle 360, queda en 329.9°, dentro del círculo.</p>
+          </div>
+
+          <div class="tabla-envoltura" tabindex="0" role="region" aria-label="Tabla de pruebas de la función">
+            <table>
+              <caption>Pruebas diseñadas antes de programar y resultado de la función</caption>
+              <thead>
+                <tr><th scope="col">Entrada RGB</th><th scope="col">Salida HSV esperada</th><th scope="col">Qué comportamiento comprueba</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>0, 0, 0</td><td>0°, 0%, 0%</td><td>Caso límite: delta = 0 y max = 0; no debe dividir entre cero ni en S ni en H.</td></tr>
+                <tr><td>255, 255, 255</td><td>0°, 0%, 100%</td><td>Acromático con max = 1: S es 0 por delta, no por max.</td></tr>
+                <tr><td>255, 0, 0</td><td>0°, 100%, 100%</td><td>Rama del canal máximo rojo.</td></tr>
+                <tr><td>0, 255, 0</td><td>120°, 100%, 100%</td><td>Rama del canal máximo verde.</td></tr>
+                <tr><td>64, 128, 192</td><td>210°, 66.7%, 75.3%</td><td>Rama del canal máximo azul con decimales y redondeo.</td></tr>
+                <tr><td>255, 0, 128</td><td>329.9°, 100%, 100%</td><td>Ajuste de tono negativo: −30.1° + 360°.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="nota lectura">La función devuelve los números sin redondear; en la tabla se muestran con un decimal. En los seis casos el resultado de la función coincide con la salida esperada.</p>
+        </div>
+      </section>
+
+      <!-- 6. Glosario -->
+      <section id="glosario" aria-labelledby="glosario-titulo">
+        <div class="contenedor">
+          <header class="seccion-cabeza">
+            <h2 id="glosario-titulo">Glosario</h2>
+            <p>Catorce términos del museo explicados con mis palabras, cada uno con un ejemplo.</p>
+          </header>
+          <dl class="glosario">
+            <div><dt>Graficación por computadora</dt><dd>Usar una computadora para convertir datos en imágenes que una persona puede ver y entender.<p class="ejemplo">Ejemplo: el mapa que convierte un origen y un destino en dos rutas dibujadas.</p></dd></div>
+            <div><dt>Píxel</dt><dd>La celda más pequeña de una imagen rasterizada; en su posición se guardan los valores de su color.<p class="ejemplo">Ejemplo: en una imagen de ancho 4, el píxel (2, 1) empieza en el índice (1 × 4 + 2) × 4 = 24 del arreglo RGBA.</p></dd></div>
+            <div><dt>Imagen rasterizada</dt><dd>Una imagen guardada como cuadrícula de píxeles, cada uno con su color.<p class="ejemplo">Ejemplo: una foto tomada con el celular.</p></dd></div>
+            <div><dt>Gráfico vectorial</dt><dd>Una imagen guardada como instrucciones de figuras (líneas, curvas, círculos) en lugar de píxeles.<p class="ejemplo">Ejemplo: un logotipo en SVG que se puede agrandar sin verse pixelado.</p></dd></div>
+            <div><dt>RGB</dt><dd>Modelo que describe un color por la cantidad de luz roja, verde y azul; en este museo cada canal va de 0 a 255.<p class="ejemplo">Ejemplo: RGB(255, 0, 0) es rojo puro.</p></dd></div>
+            <div><dt>CMY</dt><dd>Modelo que describe cuánto cian, magenta y amarillo hacen falta; es el complemento de RGB y ayuda a entender la mezcla de la impresión.<p class="ejemplo">Ejemplo: el rojo puro es CMY(0%, 100%, 100%).</p></dd></div>
+            <div><dt>Normalizar</dt><dd>Pasar un canal de la escala de 0 a 255 a la escala de 0 a 1, dividiéndolo entre 255.<p class="ejemplo">Ejemplo: 128 / 255 ≈ 0.502.</p></dd></div>
+            <div><dt>Delta (Δ)</dt><dd>La diferencia entre el canal mayor y el menor; dice qué tan separados están los canales.<p class="ejemplo">Ejemplo: en RGB(64, 128, 192), delta es 192 − 64 = 128.</p></dd></div>
+            <div><dt>Tono (H)</dt><dd>La familia del color, medida como un ángulo en un círculo de 0° a 360°; por eso 359° y 1° son casi el mismo rojo.<p class="ejemplo">Ejemplo: 210° es un azul; 42.3° es el amarillo anaranjado del sol.</p></dd></div>
+            <div><dt>Saturación (S)</dt><dd>Qué tan lejos está un color de un gris; con saturación baja el color se ve apagado.<p class="ejemplo">Ejemplo: RGB(128, 0, 0) tiene 100% de saturación en HSV y RGB(128, 64, 64) tiene 50%.</p></dd></div>
+            <div><dt>Valor (V)</dt><dd>El componente de brillo de HSV: el canal normalizado más alto, en porcentaje.<p class="ejemplo">Ejemplo: en RGB(64, 128, 192), V = 192 / 255 = 75.3%.</p></dd></div>
+            <div><dt>Luminosidad (L)</dt><dd>El componente de brillo de HSL: el punto medio entre el canal mayor y el menor.<p class="ejemplo">Ejemplo: en RGB(64, 128, 192), L = (192 + 64) / 2 / 255 = 50.2%.</p></dd></div>
+            <div><dt>Color acromático</dt><dd>Un color sin tono, donde los tres canales son iguales y delta vale 0.<p class="ejemplo">Ejemplo: el gris RGB(128, 128, 128).</p></dd></div>
+            <div><dt>GPU</dt><dd>Un procesador especializado en cálculos gráficos que le quita ese trabajo a la CPU.<p class="ejemplo">Ejemplo: la GeForce 256 de 1999, considerada con frecuencia la primera GPU de consumo.</p></dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- 7. Conclusión -->
+      <section id="conclusion" aria-labelledby="conclusion-titulo">
+        <div class="contenedor">
+          <header class="seccion-cabeza">
+            <h2 id="conclusion-titulo">Conclusión</h2>
+            <p>Lo que pensaba al empezar, la evidencia que lo cambió y cómo lo explico ahora.</p>
+          </header>
+          <ol class="conclusion-pasos" role="list">
+            <li>
+              <h3>Antes pensaba que…</h3>
+              <p>el valor (V) y la luminosidad (L) eran lo mismo con otro nombre, porque los dos dicen qué tan claro u oscuro se ve un color. También pensaba que la graficación era sobre todo hacer que las cosas se vieran bonitas.</p>
+            </li>
+            <li>
+              <h3>La evidencia fue…</h3>
+              <p>RGB(64, 128, 192): V dio 75.3% y L dio 50.2% para el mismo color exacto. En cambio, con negro, blanco y gris (delta = 0), V y L dieron exactamente lo mismo. Y en la línea del tiempo cada momento resolvió un problema concreto, desde leer listados de números hasta dejar de instalar complementos.</p>
+            </li>
+            <li>
+              <h3>Ahora lo explico así</h3>
+              <p>V solo mira el canal mayor y L promedia el mayor y el menor, así que se separan cuando delta es grande y coinciden cuando delta es 0. La graficación es una forma de traducir datos para que una persona pueda entenderlos y decidir: el mismo píxel puede escribirse en RGB o en HSV sin perder información, igual que una ruta puede leerse en un mapa o en un texto.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 8. Fuentes y créditos -->
+      <section id="fuentes" aria-labelledby="fuentes-titulo">
+        <div class="contenedor">
+          <header class="seccion-cabeza">
+            <h2 id="fuentes-titulo">Fuentes y créditos</h2>
+            <p>Fecha de consulta de todas las fuentes: 6 de octubre de 2026.</p>
+          </header>
+          <ol class="fuentes-lista">
+            <li>Computer History Museum. “Video Displays”. <em>Revolution: The First 2000 Years of Computing</em>. <a href="https://www.computerhistory.org/revolution/input-output/14/349">https://www.computerhistory.org/revolution/input-output/14/349</a></li>
+            <li>Computer History Museum. “Circular monitor display for Whirlwind”. <a href="https://www.computerhistory.org/revolution/input-output/14/349/1544">https://www.computerhistory.org/revolution/input-output/14/349/1544</a></li>
+            <li>Computer History Museum. “Ivan Sutherland demonstrating Sketchpad on the TX-2”. <a href="https://www.computerhistory.org/revolution/input-output/14/349/1878">https://www.computerhistory.org/revolution/input-output/14/349/1878</a></li>
+            <li>Wikipedia. “Sketchpad”. <a href="https://en.wikipedia.org/wiki/Sketchpad">https://en.wikipedia.org/wiki/Sketchpad</a></li>
+            <li>Computer History Museum. “Xerox Alto”. <em>Revolution: The First 2000 Years of Computing</em>. <a href="https://www.computerhistory.org/revolution/input-output/14/347">https://www.computerhistory.org/revolution/input-output/14/347</a></li>
+            <li>Computer History Museum. “BRAVO text editor screen”. <a href="https://www.computerhistory.org/revolution/input-output/14/347/1856">https://www.computerhistory.org/revolution/input-output/14/347/1856</a></li>
+            <li>Computer History Museum (21 de octubre de 2014). “Computer History Museum Adds Historic Xerox Alto Source Code to its Software Source Code Series”. <a href="https://computerhistory.org/press-releases/xerox-alto/">https://computerhistory.org/press-releases/xerox-alto/</a></li>
+            <li>Computer History Museum. “Timeline of Computer History: 1999”. <a href="https://www.computerhistory.org/timeline/1999/">https://www.computerhistory.org/timeline/1999/</a></li>
+            <li>usapopopooon. “Why Can You Right-Click Save a WebGL Canvas? A 20-Year History of Browser Graphics”. DEV Community. <a href="https://dev.to/usapopopooon/why-can-you-right-click-save-a-webgl-canvas-a-20-year-history-of-browser-graphics-4kb3">https://dev.to/usapopopooon/why-can-you-right-click-save-a-webgl-canvas-a-20-year-history-of-browser-graphics-4kb3</a></li>
+            <li>Khronos Group (3 de marzo de 2011). “Khronos Releases Final WebGL 1.0 Specification”. <a href="https://www.khronos.org/news/press/khronos-releases-final-webgl-1.0-specification">https://www.khronos.org/news/press/khronos-releases-final-webgl-1.0-specification</a></li>
+            <li>Sketchfab. “Browser and OS Compatibility”. Centro de ayuda de Sketchfab. <a href="https://help.sketchfab.com/en/articles/16152700-browser-and-os-compatibility">https://help.sketchfab.com/en/articles/16152700-browser-and-os-compatibility</a></li>
+            <li>Google. “Cómo obtener instrucciones sobre cómo llegar a un lugar y mostrar las rutas en Google Maps”. Ayuda de Google Maps. <a href="https://support.google.com/maps/answer/144339?hl=Es-419">https://support.google.com/maps/answer/144339?hl=Es-419</a></li>
+            <li>MDN Web Docs. “Pixel manipulation with canvas”. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas</a></li>
+          </ol>
+
+          <div class="creditos">
+            <h3>Créditos</h3>
+            <p><strong>Ilustraciones:</strong> los seis esquemas de la carpeta <code>assets/</code> se hicieron para este museo con apoyo de IA (Claude, de Anthropic). No reproducen las fotografías históricas; esas se consultan en los enlaces de cada sala.</p>
+            <p><strong>Datos de color:</strong> los valores de los experimentos y de la imagen costera se midieron en el laboratorio de la Misión 1 y se comprobaron con la fórmula de conversión.</p>
+            <p><strong>Muestra de ruta:</strong> los lugares, calles, tiempos y distancias de la aplicación real son datos ficticios de la actividad.</p>
+            <p><strong>Apoyo de IA:</strong> usé Claude para preparar borradores de texto, revisar cálculos y armar la estructura de la página. Los datos históricos se contrastaron con las fuentes de esta lista y los números de color con el laboratorio.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pie">
+      <div class="contenedor">
+        <p>Museo hecho por Ulises Moreno para la Misión 1 de graficación: Reconstruye el Núcleo Cromático, 2026.</p>
+        <p>El color de acento de esta página es RGB(64, 128, 192), el mismo color intermedio que convertí a mano: HSV(210°, 66.7%, 75.3%). Los enlaces usan ese mismo tono de 210° con menos luminosidad para que se lean bien.</p>
+      </div>
+    </footer>
+  </body>
+</html>

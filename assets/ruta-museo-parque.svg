@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="t">
+<title id="t">Mapa esquemático con dos rutas a pie del Museo Comunitario, marcado con O, al Parque del Lago, marcado con D. La ruta A es una línea continua y la ruta B una línea discontinua</title>
+<rect width="640" height="400" fill="#eef2ee"/>
+<ellipse cx="560" cy="70" rx="70" ry="44" fill="#d6e6f2"/>
+<line x1="30" y1="80" x2="610" y2="80" stroke="#fff" stroke-width="16" stroke-linecap="round"/>
+<line x1="30" y1="190" x2="610" y2="190" stroke="#fff" stroke-width="16" stroke-linecap="round"/>
+<line x1="30" y1="300" x2="610" y2="300" stroke="#fff" stroke-width="16" stroke-linecap="round"/>
+<line x1="90" y1="30" x2="90" y2="330" stroke="#fff" stroke-width="16" stroke-linecap="round"/>
+<line x1="260" y1="30" x2="260" y2="330" stroke="#fff" stroke-width="16" stroke-linecap="round"/>
+<line x1="440" y1="30" x2="440" y2="330" stroke="#fff" stroke-width="16" stroke-linecap="round"/>
+<line x1="560" y1="30" x2="560" y2="330" stroke="#fff" stroke-width="16" stroke-linecap="round"/>
+<path d="M90 300 H440 V190 H560 V96" fill="none" stroke="#5f6b78" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 12"/>
+<path d="M90 300 V80 H544" fill="none" stroke="#2a5580" stroke-width="6" stroke-linejoin="round"/>
+<circle cx="90" cy="300" r="15" fill="#2a5580" stroke="#fff" stroke-width="3"/><text x="90" y="305" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif">O</text>
+<rect x="545" y="64" width="30" height="30" rx="4" fill="#1b2430" stroke="#fff" stroke-width="3"/><text x="560" y="84" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif">D</text>
+<rect x="164" y="67" width="26" height="26" rx="5" fill="#2a5580"/><text x="177" y="85" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" font-family="Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif">A</text>
+<rect x="427" y="231" width="26" height="26" rx="5" fill="#5f6b78"/><text x="440" y="249" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" font-family="Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif">B</text>
+<text x="104" y="332" font-size="14" font-weight="700" fill="#1b2430" font-family="Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif">Museo Comunitario</text>
+<text x="532" y="56" text-anchor="end" font-size="14" font-weight="700" fill="#1b2430" font-family="Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif">Parque del Lago</text>
+<line x1="40" y1="366" x2="80" y2="366" stroke="#2a5580" stroke-width="6"/><text x="90" y="371" font-size="14" fill="#1b2430" font-family="Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif">A: continua, 12 min, 900 m</text>
+<line x1="330" y1="366" x2="370" y2="366" stroke="#5f6b78" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 12"/><text x="380" y="371" font-size="14" fill="#1b2430" font-family="Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif">B: discontinua, 15 min, 1.1 km</text>
+</svg>

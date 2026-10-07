@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="t">
+<title id="t">Ventana de navegador con un área canvas que muestra un cubo de líneas en 3D y una flecha que indica que se puede girar con el puntero</title>
+<rect width="640" height="400" fill="#f4f6f8"/>
+<defs><marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2a5580"/></marker></defs>
+<rect x="40" y="30" width="560" height="320" rx="14" fill="#e3e8ed" stroke="#9aa5b1" stroke-width="2"/>
+<rect x="41" y="78" width="558" height="271" fill="#fff"/>
+<circle cx="68" cy="54" r="7" fill="#c6ced6"/>
+<circle cx="90" cy="54" r="7" fill="#c6ced6"/>
+<circle cx="112" cy="54" r="7" fill="#c6ced6"/>
+<rect x="140" y="41" width="430" height="26" rx="13" fill="#fff" stroke="#c6ced6"/>
+<text x="158" y="59" font-size="13" fill="#4b5563" font-family="Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif">https://</text>
+<rect x="78" y="100" width="484" height="226" fill="#f7f9fb" stroke="#4080c0" stroke-width="2" stroke-dasharray="7 6"/>
+<text x="90" y="122" font-size="14" fill="#2a5580" font-family="SF Mono, Menlo, Consolas, monospace">&lt;canvas&gt;</text>
+<polygon points="300.0,164.0 378.0,164.0 378.0,242.0 300.0,242.0" fill="none" stroke="#4080c0" stroke-width="2.5" stroke-linejoin="round" />
+<line x1="262.0" y1="202.0" x2="300.0" y2="164.0" stroke="#4080c0" stroke-width="2.5"/>
+<line x1="340.0" y1="202.0" x2="378.0" y2="164.0" stroke="#4080c0" stroke-width="2.5"/>
+<line x1="340.0" y1="280.0" x2="378.0" y2="242.0" stroke="#4080c0" stroke-width="2.5"/>
+<line x1="262.0" y1="280.0" x2="300.0" y2="242.0" stroke="#4080c0" stroke-width="2.5"/>
+<polygon points="262.0,202.0 340.0,202.0 340.0,280.0 262.0,280.0" fill="none" stroke="#2a5580" stroke-width="3.5" stroke-linejoin="round" />
+<circle cx="262.0" cy="202.0" r="4" fill="#2a5580"/>
+<circle cx="340.0" cy="202.0" r="4" fill="#2a5580"/>
+<circle cx="340.0" cy="280.0" r="4" fill="#2a5580"/>
+<circle cx="262.0" cy="280.0" r="4" fill="#2a5580"/>
+<circle cx="300.0" cy="164.0" r="4" fill="#2a5580"/>
+<circle cx="378.0" cy="164.0" r="4" fill="#2a5580"/>
+<circle cx="378.0" cy="242.0" r="4" fill="#2a5580"/>
+<circle cx="300.0" cy="242.0" r="4" fill="#2a5580"/>
+<path d="M 214 296 A 120 44 0 0 0 432 290" fill="none" stroke="#2a5580" stroke-width="2.5" marker-end="url(#punta)"/>
+<path d="M446 262 l0 26 l7 -6 l5 11 l5 -2 l-5 -11 l9 0 z" fill="#fff" stroke="#1b2430" stroke-width="1.8" stroke-linejoin="round"/>
+<text x="320" y="382" text-anchor="middle" font-size="16" fill="#1b2430" font-family="Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif">Sin complementos: Canvas dibuja en 2D y WebGL usa la GPU para 3D</text>
+</svg>
