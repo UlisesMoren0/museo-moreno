@@ -27,12 +27,6 @@ No usa frameworks, ni JavaScript, ni recursos externos: funciona como sitio est�
 
 Abre `index.html` con doble clic en cualquier navegador.
 
-## Publicarlo
-
-1. Crea un repositorio público en GitHub y sube `index.html`, `styles.css`, `README.md` y la carpeta `assets/`.
-2. En Vercel, importa el repositorio y conserva la configuración de sitio estático (sin comando de build).
-3. Abre la URL de GitHub y la URL `*.vercel.app` en una ventana privada para comprobar que cargan.
-
 ## Créditos
 
 Las ilustraciones de `assets/` son esquemas hechos para este museo con apoyo de IA (Claude, de Anthropic); no reproducen fotografías históricas. Las fuentes de cada dato están en la sección “Fuentes y créditos” de la página.
